@@ -5,10 +5,10 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
 
-        if (a > 0) {
-            System.out.println(a);
-        }
         System.out.println(a);
-        System.out.println("minus");
+        
+        if (a < 0) {
+            System.out.println("minus");
+        }
     }
 }
