@@ -6,13 +6,13 @@ public class Main {
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-        if (a > b) {
-            for (int i = a; i >= b; i--) {
-                System.out.print(i + " ");
-            }
-        } else if (b > a) {
-            for (int i = b; i >= a; i--) {
-                System.out.print(i + " ");
+        int max = Math.max(a, b);
+        int min = Math.min(a, b);
+
+        for (int i = max; i >= min; i--) {
+            System.out.print(i);
+            if (i > min) {
+                System.out.print(" ");
             }
         }
     }
