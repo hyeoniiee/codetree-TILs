@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // 변수 선언 및 입력
+        int n = sc.nextInt();
+        int cnt = 0;
+
+        // 값을 조건대로 증가시켜 출력합니다.
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < n; j++) {
+                if(i % 2 == 0)
+                    cnt++;
+                else
+                    cnt += 2;
+                
+                System.out.print(cnt + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+이중 for문과 cnt를 사용해서 정사각형 모양의 정수들을 증가하면 출력.
+짝수번째줄과 홀수번째줄은 다르게 출력되어야 함
