@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // 변수 선언
+        int p1 = sc.nextInt();
+        int p2 = sc.nextInt();
+
+        // 배열 선언
+        int[] arr = new int[10];
+        arr[0] = p1;
+        arr[1] = p2;
+
+        // 앞의 두 수를 더한 값의 일의 자리 숫자를 다음 원소로 합니다.
+        for(int i = 2; i < 10; i++)
+            arr[i] = (arr[i - 2] + arr[i - 1]) % 10;
+
+        // 10개의 정수를 출력
+        for(int i = 0; i < 10; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+
+
+1. 변수 두 개를 선언하여 두 정수를 입력받고, 두 정수 첫 번째, 두번째 원소로 하는 크기가 10인 배열 생성
+2. i의 초기값이 2이고, i가 10보다 작은 경우에만 실행되도록 조건을 걸고, i가 매 for loop마다 1씩 증가하는 for문을 실행하여, 
+  각 for loop마다 arr[i]에 arr[i - 1]과 arr[i - 2]를 더한 값의 일의 자리 숫자를 저장
+3. i의 초기값이 0이고, i가 10 보다 작은 경우에만 실행되도록 조건을 걸고, i가 매 for loop마다 1씩 증가하는 for문을 실행하여, 
+  각 for loop마다 arr[i]와 공백 하나를 출력
