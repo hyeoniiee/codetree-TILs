@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+        int[] numbers = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            numbers[i] = scanner.nextInt();
+        }
+
+        int minDifference = Integer.MAX_VALUE; 
+
+        for (int i = 0; i < n - 1; i++) {
+            int difference = numbers[i + 1] - numbers[i];
+            if (difference < minDifference) {
+                minDifference = difference;
+            }
+        }
+
+        System.out.println(minDifference);
+    }
+}
